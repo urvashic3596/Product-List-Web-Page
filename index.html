@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">VENIA</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">ALL</a></li>
+        <li><a href="#about">WOMEN</a></li>
+        <li><a href="#services">MEN</a></li>
+        <li><a href="#contact">SMART GEAR</a></li>
+        <li><a href="#contact">ACCESSORIES</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="text-container">
+      <h1>Men's<br>Outerwear</h1>
+      <div class="underline"></div>
+    </div>
+    <div class="image-container">
+      <img src="path/to/your/image.jpg" alt="Men's Outerwear">
+    </div>
+  </div>
+  <section class="products-section">
+    <div class="loader"></div>
+    <div class="products">
+      <div id="filter-section" class="container">
+        <div class="box left">
+          <label class="label">
+            <select id="category-filter" class="input regular-body-m-16-">
+              <option value="all">All</option>
+            </select>
+          </label>
+        </div>
+        <div class="box center">
+          <input type="text" id="search-bar" placeholder="Search products..." class="input search" />
+        </div>
+        <div class="box right">
+          <select id="sort-options" class="input sort">
+            <option value="default">Sort By</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <main>
+        <div id="product-list" class="products"></div>
+        <button id="load-more" class="btn hidden">Load More</button>
+      </main>
+    </div>
+  </section>
+  <div id="error-message" class="hidden">Failed to load products. Please try again later.</div>
+  <script src="script.js"></script>
+</body>
+</html>
